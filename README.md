@@ -16,5 +16,24 @@ https://zenn.dev/nekoshita/articles/b04bdc3fee1cd9
 アクセスコントロールモードは `Uniform`
 アクセス可能なユーザーは
 - プロジェクトのオーナー
-- bin/apply引数で指定したユーザー
+- bin/apply の引数で指定したユーザー
 にしました。（本当はユーザーだけにしたかったけど、自分自身以外のメールアドレスにしてしまうと、自分がGCSバケットを作成する権限がなくなってしまうので、オーナーの権限を残しました）
+
+
+## GCSバケットの作成
+```
+$ export GCP_PROJECT_ID="your-gcp-project-id"
+$ export GCS_BUCKET_NAME="your-gcs-bucket-name"
+$ export USER_MAIL="your-google-user-mail-to-allow-ssh-acccess@gmail.com"
+
+$ bin/apply $GCP_PROJECT_ID $GCS_BUCKET_NAME $USER_MAIL
+```
+
+## GCSバケットの削除
+```
+$ export GCP_PROJECT_ID="your-gcp-project-id"
+$ export GCS_BUCKET_NAME="your-gcs-bucket-name"
+$ export USER_MAIL="your-google-user-mail-to-allow-ssh-acccess@gmail.com"
+
+$ bin/destroy $GCP_PROJECT_ID $GCS_BUCKET_NAME $USER_MAIL
+```
