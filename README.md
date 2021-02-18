@@ -1,7 +1,7 @@
 # GCSバケットに特定のユーザーしかアクセスできなくする
 
 ## 解説記事
-https://zenn.dev/articles/b04bdc3fee1cd9
+https://zenn.dev/nekoshita/articles/b04bdc3fee1cd9
 
 ## GCSバケットに特定のユーザーしかアクセスできなくする方法
 - プロジェクトレベルのIAMで `storage.objects.get` の権限を付与しない
